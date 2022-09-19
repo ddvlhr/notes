@@ -1,7 +1,5 @@
 # Visual Studio
 
-<hr />
-
 > ##  ```wsdl``` 转换工具(仅限 ```windows``` )
 
 打开 ```prompt``` 工具，输入以下命令：

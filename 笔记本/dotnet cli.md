@@ -1,7 +1,5 @@
 # dotnet cli
 
-<hr />
-
 > ## publish
 
 ```powershell
