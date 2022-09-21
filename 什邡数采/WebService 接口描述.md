@@ -13,14 +13,14 @@
 bool listBaseInfomation(int equipmentType, string lastSyncServerTime, int recentDays, out string responseXml, out string failReason)
 ```
 #### 接口返回 xml 文件中的除牌号中的测量指标不同外,其他属性都是通用的
-#### 牌号中的指标是根据数采系统牌号中的指标生成的
+#### 牌号中的指标是根据数采系统牌号中的指标生成的, ```status``` 表示启用状态, ```1```  为启用, ``` 0``` 为停用
 #### 数采系统中添加指标时会要求填写指标别名, 如: 重量( ```weight``` ), 下载牌号时就会根据指标别名生成 ```xml```
 #### ```均值```, ```SD``` 值判定标准也可以从牌号中获取
 #### ```<lastSyncServerTime />``` 返回当前获取基础信息的时间
 ```xml
 <?xml version="1.0" encoding="GB2312" ?>
 <info>
-  <specification id="1" name="牌号1" equipmentType="设备类型名称">
+  <specification id="1" name="牌号1" equipmentType="设备类型名称" status="1">
     <weight mid="" high="" low="" />
     <circle mid="" high="" low="" position="" />
     <oval mid="" high="" low="" />
@@ -28,15 +28,15 @@ bool listBaseInfomation(int equipmentType, string lastSyncServerTime, int recent
     <resistance mid="" high="" low="" />
     <hardness mid="" high="" low="" position="" />
   </specification>
-  <turn id="1" name="班次1" />
-  <turn id="2" name="班次2" />
-  <turn id="3" name="班次3" />
-  <machine id="1" name="机台1" />
-  <machine id="2" name="机台2" />
-  <machine id="3" name="机台3" />
-  <type id="1" name="测量类型1" />
-  <type id="2" name="测量类型2" />
-  <type id="3" name="测量类型3" />
+  <turn id="1" name="班次1" status="1" />
+  <turn id="2" name="班次2" status="1" />
+  <turn id="3" name="班次3" status="1" />
+  <machine id="1" name="机台1" status="1" />
+  <machine id="2" name="机台2" status="1" />
+  <machine id="3" name="机台3" status="1" />
+  <type id="1" name="测量类型1" status="1" />
+  <type id="2" name="测量类型2" status="1" />
+  <type id="3" name="测量类型3" status="1" />
   <lastSyncServerTime>2022-9-14 13:09:09</lastSyncServerTime>
 </info>
 ```
